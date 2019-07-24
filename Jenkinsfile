@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage ('Build Servlet Project') {
             steps {
-                /*For Mac & Linux Machine */
-               sh  'mvn clean package'
+               //sh  'mvn clean package'
+                build job : 'Packer_servlet_project'
 
             }
 

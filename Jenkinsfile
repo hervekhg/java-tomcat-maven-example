@@ -11,12 +11,13 @@ pipeline {
             post{
 
                 success{
-                    echo 'Now Archiving ....'
+                    echo 'Now Analyzing code ....'
 
-                    archiveArtifacts artifacts : '**/*.war'
+                    //archiveArtifacts artifacts : '**/*.war'
+                    build job : 'Static_AnalySis _Servlet_App'
                 }
                 failure{
-                    echo "Error During Archiving..."
+                    echo "Error During Analyzing..."
                 }
             }
         }

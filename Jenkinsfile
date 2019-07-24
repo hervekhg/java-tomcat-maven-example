@@ -24,7 +24,7 @@ pipeline {
         stage ('Deploy Build in Staging Area'){
             steps{
 
-                build job : 'Deploy-StagingArea-Piple'
+                build job : 'Deploy_Serverlet_Staging_Env'
 
             }
         }
@@ -35,7 +35,7 @@ pipeline {
                     input message: 'Approve PRODUCTION Deployment?'
                 }
                 
-                build job : 'Deploy-Production-Pipeline'
+                build job : 'Deploy_To_Production'
             }
 
             post{
